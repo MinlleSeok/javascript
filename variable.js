@@ -104,3 +104,49 @@ for (var i = 0; i < 10; i++) {
 
 var time = 10;
 var greeting;
+
+if(time < 10) {
+    greeting = 'Good morning';
+} else if (time < 20) {
+    greeting = 'Good day';
+} else {
+    greeting = 'Good evening';
+}
+
+console.log(greeting);
+
+// 표현식
+console.log(5);                                 // 5
+console.log(5 * 10);                            // 50
+console.log(5 * 10 > 10);                       // true
+console.log((5 * 10 > 10) && (5 * 10 < 100));   // true
+
+// 선언문(Declaration statement)
+var x = 5 * 10; // 표현식 x = 5 * 10 를 포함하는 문이다.
+
+// 할당문(Assignment statement)
+x = 100; // 이 자체가 표현식이지만 완전한 문이기도 하다.
+
+// 함수의 정의(함수 선언문)
+function square(number) {
+    return number * number;
+}
+
+// 함수의 호출 
+square(2); // 4
+
+var person = {
+    name: 'Lee',
+    gender: 'male',
+    sayHello: function () {
+        console.log('Hi! My name is ' + this.name);
+    }
+};
+
+console.log(typeof person); // object
+console.log(person); // { name: 'Lee', gender: 'male', sayHello: [Function: sayHello]}
+
+person.sayHello(); // Hi! My name is Lee
+
+var arr = [1, 2, 3, 4, 5];
+console.log(arr[1]); // 2
